@@ -1,0 +1,5 @@
+
+app.get('/countries', async (request, response) => {
+    const countries = await CountryModel.find({"name": /.*m.*/});
+    response.status(200).json(countries);
+});
