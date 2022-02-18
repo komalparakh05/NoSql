@@ -1,0 +1,13 @@
+app.post('/countries', async (request, response) => {
+    const {_id , name} = request.body
+
+    const continent = await ContinentModel.create(
+        {"_id":1,"name":"Europe"},
+        {"_id":2,"name":"Asia"},
+        {"_id":3,"name":"North America"},
+        {"_id":4,"name":"South America"},
+        {"_id":5,"name":"Australia"},
+        {"_id":6,"name":"Africa"}
+        );
+    response.status(200).json(continent);
+});
