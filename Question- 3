@@ -1,0 +1,5 @@
+
+app.get('/countries/:id', async (request, response) => {
+    const count = require(continents.distinct('country').length
+    response.status(200).json(count);
+});
