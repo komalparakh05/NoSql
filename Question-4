@@ -1,6 +1,6 @@
 # Send back the fourth countries of a continent by alphabetical order
-def fourth_country():
+def FourthCountry():
     for Continent in Continents.find():
         for countryId in Continent['Countries']:
-            Counter = Countries.find({'_id': ObjectId(Country_id)}).sort("name")
-            print(Continent['name'],':',ctr[0]['name'])
+            Counter = Countries.find({'_id': ObjectId(Country_id)}).sort("Name")
+            print(Continent['Name'],':',ctr[0]['name'])
