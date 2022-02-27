@@ -1,0 +1,13 @@
+import pymongo as pymongo
+from pymongo.server_api import ServerApi
+from bson.objectid import ObjectId
+
+#CHANGE CONNECTION STRING
+client = pymongo.MongoClient(
+    "Enter your database link",
+    server_api=ServerApi('1'))
+
+db = client.test
+
+Countries = db.Countries
+Continents = db.Continents
