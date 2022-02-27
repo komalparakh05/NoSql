@@ -1,1 +1,3 @@
-
+def population():
+    for c in countries.find({}).sort("population"):
+        print(c['name'], c['population'])
