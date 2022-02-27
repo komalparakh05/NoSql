@@ -1,0 +1,16 @@
+Get countries which have u in their name and population greater than 100 000
+def search_by_name_and_order_by_population():
+    for con in countries.find(
+            {
+                'name':
+                    {'$regex': 'u', '$options': 'i'}, 'population': {'$gt': 100000}
+            }
+            ).sort("population"):
+        print("The country name is", con['name'], con['population'])
+
+if __name_ == '_main__':
+    find_by_query('Fr')  # change the search string
+    get_continents_and_countries()
+    order_by_population()
+    fourth_country()
+    search_by_name_and_order_by_population()
