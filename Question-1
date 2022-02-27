@@ -1,5 +1,4 @@
-
-app.get('/countries', async (request, response) => {
-    const countries = await CountryModel.find({"name": /.*m.*/});
-    response.status(200).json(countries);
-});
+# Get all the countries where the letter or the word is in the name
+def find_by_query(name):
+    for c in Countries.find({'name': {"$regex": name, "$options": 'i'}}):
+        print(c['name'])
