@@ -1,4 +1,4 @@
 # Get all countries ordered by the number of people and sort from less to most populated
 def order_by_population():
-    for c in Countries.find({}).sort("population"):
-        print("The Country name is", c['name'], c['population'])
+    for c in Countries.find({}).sort("Population"):
+        print("The Country name is", c['Name'], c['Population'])
