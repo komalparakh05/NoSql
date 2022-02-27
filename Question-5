@@ -1,3 +1,10 @@
-def population():
-    for c in countries.find({}).sort("population"):
-        print(c['name'], c['population'])
+client = pymongo.MongoClient(
+        "mongodb+srv://Komal_Parakh:Komal2509@cluster0.tnqu0.mongodb.net/test?retryWrites=true&w=majority")
+    db = client.test
+    Countries = db.Countries
+    for c in Countries.find():
+        print(c['name'])
+    list = [{"Countries": "India", "population": 1390000000},
+            {"Countries": "Greece", "population":10370744},
+            {"Countries": "Great Britain", "population":68562151}]
+    Countries.insert_many(list)
