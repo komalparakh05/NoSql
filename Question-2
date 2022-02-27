@@ -1,12 +1,12 @@
-#Send list of continents with their number of countries
-def get_continents_and_countries():
+#Send list of Continents with their number of Countries
+def get_Continents_and_Countries():
     agg_pipeline = [
         {
             '$project': {
                 'name': "$name",
-                'countries': {'$size': "$countries"}}
+                'Countries': {'$size': "$Countries"}}
         }
     ]
-    cont = continents.aggregate(agg_pipeline)
-    for continent in cont:
-        print(continent)
+    cont = Continents.aggregate(agg_pipeline)
+    for Continent in cont:
+        print(Continent)
